@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="30dp"
+    tools:context=".Introduccion">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:text="Introducción"
+        android:textSize="30sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="508dp"
+        android:layout_marginTop="70dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/vestimenta"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="310dp"
+            android:text="vestimenta" />
+
+        <Button
+            android:id="@+id/cuerpo"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="260dp"
+            android:text="cuerpo" />
+
+        <Button
+            android:id="@+id/animales"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="210dp"
+            android:text="animales" />
+
+        <Button
+            android:id="@+id/abecedario"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="160dp"
+            android:text="abecedario" />
+
+        <Button
+            android:id="@+id/alimentos"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="110dp"
+            android:text="alimentos" />
+
+        <Button
+            android:id="@+id/colores"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:text="colores" />
+
+        <Button
+            android:id="@+id/numeros"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="numeros" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/diccionario"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="0dp"
+            android:text="Diccionario" />
+
+        <Button
+            android:id="@+id/progreso"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:text="Progreso" />
+
+        <Button
+            android:id="@+id/perfil"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="5dp"
+            android:text="Mi perfil" />
+
+    </LinearLayout>
+
+</FrameLayout>
