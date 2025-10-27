@@ -4,16 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="30dp"
+    android:gravity="center"
+    android:background="#43A047"
     tools:context=".Introduccion">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp"
-        android:text="Introducción"
-        android:textSize="30sp" />
+        android:layout_marginTop="20dp"
+        android:text="Intermedio"
+        android:textColor="#0F2E3A"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"/>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -23,60 +27,60 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/vestimenta"
+            android:id="@+id/oficios"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="310dp"
-            android:text="vestimenta" />
+            android:text="oficios y Profesiones" />
 
         <Button
-            android:id="@+id/cuerpo"
+            android:id="@+id/adjetivos"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="260dp"
-            android:text="cuerpo" />
+            android:text="Adjetivos" />
 
         <Button
-            android:id="@+id/animales"
+            android:id="@+id/preguntas"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="210dp"
-            android:text="animales" />
+            android:text="preguntas" />
 
         <Button
-            android:id="@+id/abecedario"
+            android:id="@+id/negaciones"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="160dp"
-            android:text="abecedario" />
+            android:text="negaciones y afirmaciones" />
 
         <Button
-            android:id="@+id/alimentos"
+            android:id="@+id/frases"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="110dp"
-            android:text="alimentos" />
+            android:text="Frases cotidianasas" />
 
         <Button
-            android:id="@+id/colores"
+            android:id="@+id/transporte"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="60dp"
-            android:text="colores" />
+            android:text="Transporte y direcciones" />
 
         <Button
-            android:id="@+id/numeros"
+            android:id="@+id/lugares"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:text="numeros" />
+            android:text="Lugares" />
 
     </FrameLayout>
 
@@ -84,6 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="bottom"
+        android:layout_gravity="center"
         android:orientation="horizontal">
 
         <Button

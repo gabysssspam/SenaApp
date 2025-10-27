@@ -12,6 +12,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SENA">
         <activity
+            android:name=".Avanzado"
+            android:exported="false" />
+        <activity
+            android:name=".Intermedio"
+            android:exported="false" />
+        <activity
+            android:name=".Basico"
+            android:exported="false" />
+        <activity
+            android:name=".Introduccion"
+            android:exported="false" />
+        <activity
+            android:name=".Cuestionarios"
+            android:exported="false" />
+        <activity
+            android:name=".Juegos"
+            android:exported="false" />
+        <activity
+            android:name=".Inicio"
+            android:exported="false" />
+        <activity
+            android:name=".Registro"
+            android:exported="false" />
+        <activity
+            android:name=".InicioSesion"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

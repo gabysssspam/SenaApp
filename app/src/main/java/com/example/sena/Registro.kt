@@ -1,59 +1,49 @@
 package com.example.sena
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.button.MaterialButton
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [Registro.newInstance] factory method to
- * create an instance of this fragment.
- */
-class Registro : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
+class Registro : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_registro)
+
+        val etCorreo = findViewById<EditText>(R.id.etCorreo)
+        val etUsuario = findViewById<EditText>(R.id.etUsuario)
+        val etContrasena = findViewById<EditText>(R.id.etContrasenaReg)
+        val btnCrearCuenta = findViewById<MaterialButton>(R.id.btnCrearCuenta)
+        val btnRegresar = findViewById<MaterialButton>(R.id.btnRegresar)
+
+        // Regresa a MainActivity
+        btnRegresar.setOnClickListener {
+            finish()
         }
-    }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registro, container, false)
-    }
+        //Crea cuenta y abrir la actividad Inicio
+        btnCrearCuenta.setOnClickListener {
+            val correo = etCorreo.text.toString().trim()
+            val usuario = etUsuario.text.toString().trim()
+            val contrasena = etContrasena.text.toString().trim()
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Registro.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Registro().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+            // Validación
+            if (correo.isEmpty() || usuario.isEmpty() || contrasena.isEmpty()) {
+                Toast.makeText(this, "Por favor completa todos los campos", Toast.LENGTH_SHORT).show()
+            } else {
+                // (Aquí iría lógica de guardar los datos en una base de datos, si tuvieras una)
+
+                // Mostrar mensaje y redirigir a Inicio
+                Toast.makeText(this, "Registro exitoso. Bienvenido, $usuario", Toast.LENGTH_SHORT).show()
+
+                val intent = Intent(this, Inicio::class.java)
+                startActivity(intent)
+                finish() // opcional: cerrar Registro para que no vuelva con back
             }
+        }
     }
 }
