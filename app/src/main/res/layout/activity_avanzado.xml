@@ -1,147 +1,342 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4CAF50"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:padding="16dp"
-    tools:context=".Avanzado">
+    android:background="#43A047">
 
-    <!-- Título -->
-    <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Avanzado"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="24dp" />
+    <!-- Barra superior -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical">
 
-    <!-- Botones principales -->
+        <!-- Título centrado -->
+        <TextView
+            android:id="@+id/tvTituloBasico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avanzado"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- Contenido principal -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="16dp">
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btnPreposiciones"
+            <!-- FAMILIA -->
+            <LinearLayout
+                android:id="@+id/itemFamilia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Preposiciones"
-                android:backgroundTint="@android:color/white"
-                android:textColor="#000"
-                android:layout_marginVertical="6dp" />
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/tvFamilia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Preposiciones"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgFamilia"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="Icono Familia"
+                    android:src="@drawable/prepo"/>
+            </LinearLayout>
+
+            <!-- PRONOMBRES -->
+            <LinearLayout
+                android:id="@+id/itemPronombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/tvPronombres"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Conectores Temporales"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgPronombres"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="Icono Pronombres"
+                    android:src="@drawable/conectores"/>
+            </LinearLayout>
+
+            <!-- SEMANA / MES / AÑO -->
+            <LinearLayout
+                android:id="@+id/itemTiempo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/tvTiempo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Adverbios"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgTiempo"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="Icono Calendario"
+                    android:src="@drawable/adverbios"/>
+            </LinearLayout>
+
+            <!-- SALUDOS -->
+            <LinearLayout
+                android:id="@+id/itemSaludos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/tvSaludos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Comparaciones y conectores"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgSaludos"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="Icono Saludos"
+                    android:src="@drawable/compycon"/>
+            </LinearLayout>
+
+            <!-- PALABRAS BÁSICAS -->
+            <LinearLayout
+                android:id="@+id/itemPalabrasBasicas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/tvPalabrasBasicas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Medio Ambiente"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgPalabrasBasicas"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="Icono Palabras Básicas"
+                    android:src="@drawable/medioambiente"/>
+            </LinearLayout>
+
+            <!-- VERBOS -->
+            <LinearLayout
+                android:id="@+id/itemVerbos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/tvVerbos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Noticias y eventos"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imgVerbos"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:contentDescription="Icono Verbos"
+                    android:src="@drawable/noticias"/>
+            </LinearLayout>
 
             <Button
-                android:id="@+id/btnConectoresTemporales"
+                android:id="@+id/btnRegresar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Conectores temporales"
-                android:backgroundTint="@android:color/white"
-                android:textColor="#000"
-                android:layout_marginVertical="6dp" />
+                android:text="Regresar"
+                android:backgroundTint="#2E7D32"
+                android:textColor="@android:color/white"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="50dp"/>
 
-            <Button
-                android:id="@+id/btnAdverbios"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Adverbios"
-                android:backgroundTint="@android:color/white"
-                android:textColor="#000"
-                android:layout_marginVertical="6dp" />
-
-            <Button
-                android:id="@+id/btnComparaciones"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Comparaciones y conectores"
-                android:backgroundTint="@android:color/white"
-                android:textColor="#000"
-                android:layout_marginVertical="6dp" />
-
-            <Button
-                android:id="@+id/btnMedioAmbiente"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Medio ambiente"
-                android:backgroundTint="@android:color/white"
-                android:textColor="#000"
-                android:layout_marginVertical="6dp" />
-
-            <Button
-                android:id="@+id/btnNoticias"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Noticias y eventos"
-                android:backgroundTint="@android:color/white"
-                android:textColor="#000"
-                android:layout_marginVertical="6dp" />
-
-            <Button
-                android:id="@+id/btnPolitica"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Política"
-                android:backgroundTint="@android:color/white"
-                android:textColor="#000"
-                android:layout_marginVertical="6dp" />
         </LinearLayout>
     </ScrollView>
 
-    <!-- Botón Regresar -->
-    <Button
-        android:id="@+id/btnRegresar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Regresar"
-        android:backgroundTint="#2E7D32"
-        android:textColor="@android:color/white"
-        android:layout_marginVertical="10dp" />
-
-    <!-- Barra inferior -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="72dp"
         android:orientation="horizontal"
-        android:background="@android:color/black"
-        android:gravity="center">
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="#0A1F28">
 
-        <Button
-            android:id="@+id/btnDiccionario"
+        <!-- Diccionario -->
+        <LinearLayout
+            android:id="@+id/navDiccionario"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Diccionario"
-            android:textColor="@android:color/white"
-            android:background="#00000000" />
+            android:orientation="vertical"
+            android:gravity="center">
 
-        <Button
-            android:id="@+id/btnProgreso"
+            <ImageView
+                android:id="@+id/navDiccionarioIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="Diccionario"
+                android:src="@drawable/diccionario"/>
+
+            <TextView
+                android:id="@+id/navDiccionarioText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diccionario"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Progreso -->
+        <LinearLayout
+            android:id="@+id/navProgreso"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Progreso"
-            android:textColor="@android:color/white"
-            android:background="#00423C3C" />
+            android:orientation="vertical"
+            android:gravity="center">
 
-        <Button
-            android:id="@+id/btnPerfil"
+            <ImageView
+                android:id="@+id/navProgresoIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="Progreso"
+                android:src="@drawable/progreso" />
+
+            <TextView
+                android:id="@+id/navProgresoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Progreso"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Mi perfil -->
+        <LinearLayout
+            android:id="@+id/navPerfil"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Mi perfil"
-            android:textColor="@android:color/white"
-            android:background="#00000000" />
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/navPerfilIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="Mi perfil"
+                android:src="@drawable/perfil"/>
+
+            <TextView
+                android:id="@+id/navPerfilText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mi perfil"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
     </LinearLayout>
-
 </LinearLayout>
+
