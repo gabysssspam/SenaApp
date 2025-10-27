@@ -1,117 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4CAF50"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="#43A047"
-    tools:context=".Introduccion">
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    tools:context=".Basico">
 
+    <!-- Título -->
     <TextView
+        android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:text="Basico"
-        android:textColor="#0F2E3A"
-        android:textSize="34sp"
+        android:text="Básico"
+        android:textSize="26sp"
         android:textStyle="bold"
-        android:fontFamily="sans-serif-black"/>
+        android:textColor="@android:color/white"
+        android:layout_marginTop="24dp"/>
 
-    <FrameLayout
+    <!-- Botones principales -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="508dp"
-        android:layout_marginTop="70dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp">
 
-        <Button
-            android:id="@+id/familia"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="310dp"
-            android:text="familia" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/pronombres"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="260dp"
-            android:text="pronombres" />
+            <Button
+                android:id="@+id/btnFamilia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Familia"
+                android:backgroundTint="@android:color/white"
+                android:textColor="#000"
+                android:layout_marginVertical="6dp"/>
 
-        <Button
-            android:id="@+id/años"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="210dp"
-            android:text="semana/mes/año" />
+            <Button
+                android:id="@+id/btnPronombres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pronombres"
+                android:backgroundTint="@android:color/white"
+                android:textColor="#000"
+                android:layout_marginVertical="6dp"/>
 
-        <Button
-            android:id="@+id/saludos"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="160dp"
-            android:text="saludos" />
+            <Button
+                android:id="@+id/btnSemanaMesAno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Semana / Mes / Año"
+                android:backgroundTint="@android:color/white"
+                android:textColor="#000"
+                android:layout_marginVertical="6dp"/>
 
-        <Button
-            android:id="@+id/palabras"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="110dp"
-            android:text="palabras basicas" />
+            <Button
+                android:id="@+id/btnSaludos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saludos"
+                android:backgroundTint="@android:color/white"
+                android:textColor="#000"
+                android:layout_marginVertical="6dp"/>
 
-        <Button
-            android:id="@+id/verbos"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="60dp"
-            android:text="verbos" />
+            <Button
+                android:id="@+id/btnPalabrasBasicas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Palabras básicas"
+                android:backgroundTint="@android:color/white"
+                android:textColor="#000"
+                android:layout_marginVertical="6dp"/>
 
-        <Button
-            android:id="@+id/emociones"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:text="emociones y sentimientos" />
+            <Button
+                android:id="@+id/btnVerbos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Verbos"
+                android:backgroundTint="@android:color/white"
+                android:textColor="#000"
+                android:layout_marginVertical="6dp"/>
 
-    </FrameLayout>
+            <Button
+                android:id="@+id/btnEmociones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Emociones y Sentimientos"
+                android:backgroundTint="@android:color/white"
+                android:textColor="#000"
+                android:layout_marginVertical="6dp"/>
+        </LinearLayout>
+    </ScrollView>
 
+    <!-- Botón Regresar -->
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:backgroundTint="#2E7D32"
+        android:textColor="@android:color/white"
+        android:layout_marginVertical="10dp"/>
+
+    <!-- Barra inferior -->
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@android:color/black"
+        android:gravity="center">
 
         <Button
-            android:id="@+id/diccionario"
-            android:layout_width="120dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="0dp"
-            android:text="Diccionario" />
+            android:id="@+id/btnDiccionario"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Diccionario"
+            android:textColor="@android:color/white"
+            android:background="#00000000"/>
 
         <Button
-            android:id="@+id/progreso"
-            android:layout_width="110dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="5dp"
-            android:text="Progreso" />
+            android:id="@+id/btnProgreso"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Progreso"
+            android:textColor="@android:color/white"
+            android:background="#00423C3C"/>
 
         <Button
-            android:id="@+id/perfil"
-            android:layout_width="110dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="5dp"
-            android:text="Mi perfil" />
-
+            android:id="@+id/btnPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Mi perfil"
+            android:textColor="@android:color/white"
+            android:background="#00000000"/>
     </LinearLayout>
 
-</FrameLayout>
+</LinearLayout>

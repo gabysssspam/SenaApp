@@ -1,10 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4CAF50"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
     tools:context=".Juegos">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Juegos"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Contenido con Scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnMemoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Juego de Memoria"
+                android:backgroundTint="@android:color/white"
+                android:textColor="#000"
+                android:layout_marginVertical="6dp"/>
+
+            <Button
+                android:id="@+id/btnAdivinanzas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Adivinanzas"
+                android:backgroundTint="@android:color/white"
+                android:textColor="#000"
+                android:layout_marginVertical="6dp"/>
+
+            <Button
+                android:id="@+id/btnParejas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Encuentra las Parejas"
+                android:backgroundTint="@android:color/white"
+                android:textColor="#000"
+                android:layout_marginVertical="6dp"/>
+
+            <Button
+                android:id="@+id/btnCrucigrama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Crucigrama"
+                android:backgroundTint="@android:color/white"
+                android:textColor="#000"
+                android:layout_marginVertical="6dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botón Regresar -->
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:backgroundTint="#2E7D32"
+        android:textColor="@android:color/white"
+        android:layout_marginVertical="10dp"/>
+
+    <!-- Barra inferior -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@android:color/black"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnDiccionario"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Diccionario"
+            android:textColor="@android:color/white"
+            android:background="#00000000"/>
+
+        <Button
+            android:id="@+id/btnProgreso"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Progreso"
+            android:textColor="@android:color/white"
+            android:background="#00423C3C"/>
+
+        <Button
+            android:id="@+id/btnPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Mi perfil"
+            android:textColor="@android:color/white"
+            android:background="#00000000"/>
+    </LinearLayout>
+
+</LinearLayout>
