@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#43A047">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/tvTituloDiccionario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diccionario"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/btnSettings"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_settings" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="#1C5C7D">
+
+        <EditText
+            android:id="@+id/etBuscar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@+id/btnBuscar"
+            android:paddingStart="12dp"
+            android:paddingEnd="40dp"
+            android:background="@android:color/transparent"
+            android:hint="Buscar una palabra"
+            android:textColor="@android:color/white"
+            android:textColorHint="#DDFFFFFF"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/btnBuscar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_search" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvDiccionario" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:paddingHorizontal="16dp" android:scrollbars="vertical" android:fadeScrollbars="false" tools:listitem="@layout/item_diccionario_palabra" />
+
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:backgroundTint="#2E7D32"
+        android:textColor="@android:color/white"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="50dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:orientation="horizontal"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="#0A1F28">
+
+
+        <LinearLayout
+            android:id="@+id/btnDiccionario"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/navDiccionarioIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/diccionario" />
+
+            <TextView
+                android:id="@+id/navDiccionarioText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diccionario"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnProgreso"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/navProgresoIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/progreso" />
+
+            <TextView
+                android:id="@+id/navProgresoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Progreso"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/navPerfilIcon"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/perfil" />
+
+            <TextView
+                android:id="@+id/navPerfilText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mi perfil"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

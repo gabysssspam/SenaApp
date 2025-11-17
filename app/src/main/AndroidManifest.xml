@@ -12,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SENA">
         <activity
+            android:name=".Progreso"
+            android:exported="false" />
+        <activity
+            android:name=".Perfil"
+            android:exported="false" />
+        <activity
+            android:name=".Configuracion"
+            android:exported="false" />
+        <activity
+            android:name=".Diccionario"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
