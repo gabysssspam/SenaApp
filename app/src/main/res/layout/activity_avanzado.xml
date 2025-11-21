@@ -49,7 +49,7 @@
                 android:padding="12dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:background="@android:color/white"
+                android:background="@drawable/rounded_button"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground">
@@ -83,7 +83,7 @@
                 android:padding="12dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:background="@android:color/white"
+                android:background="@drawable/rounded_button"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground">
@@ -117,7 +117,7 @@
                 android:padding="12dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:background="@android:color/white"
+                android:background="@drawable/rounded_button"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground">
@@ -151,7 +151,7 @@
                 android:padding="12dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:background="@android:color/white"
+                android:background="@drawable/rounded_button"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground">
@@ -185,7 +185,7 @@
                 android:padding="12dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:background="@android:color/white"
+                android:background="@drawable/rounded_button"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground">
@@ -219,7 +219,7 @@
                 android:padding="12dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:background="@android:color/white"
+                android:background="@drawable/rounded_button"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackground">

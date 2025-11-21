@@ -41,7 +41,7 @@
             android:layout_width="280dp"
             android:layout_height="48dp"
             android:layout_marginTop="18dp"
-            android:background="@color/white"
+            android:background="@drawable/edittext_transparente"
             android:padding="12dp"
             android:hint="Usuario:"
             android:inputType="textPersonName" />
@@ -51,14 +51,14 @@
             android:layout_width="280dp"
             android:layout_height="48dp"
             android:layout_marginTop="16dp"
-            android:background="@color/white"
+            android:background="@drawable/edittext_transparente"
             android:padding="12dp"
             android:hint="Contraseña:"
             android:inputType="textPassword" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnEntrar"
-            android:layout_width="280dp"
+            android:layout_width="216dp"
             android:layout_height="54dp"
             android:layout_marginTop="22dp"
             android:text="Iniciar sesión"
@@ -72,7 +72,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegresar"
-            android:layout_width="280dp"
+            android:layout_width="216dp"
             android:layout_height="54dp"
             android:layout_marginTop="22dp"
             android:backgroundTint="#FFFFFF"

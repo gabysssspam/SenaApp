@@ -41,6 +41,7 @@
             android:layout_width="280dp"
             android:layout_height="48dp"
             android:layout_marginTop="18dp"
+            android:background="@drawable/edittext_transparente"
             android:padding="12dp"
             android:hint="Correo electrónico:"
             android:inputType="textEmailAddress" />
@@ -50,6 +51,7 @@
             android:layout_width="280dp"
             android:layout_height="48dp"
             android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_transparente"
             android:padding="12dp"
             android:hint="Usuario:"
             android:inputType="textPersonName" />
@@ -59,37 +61,38 @@
             android:layout_width="280dp"
             android:layout_height="48dp"
             android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_transparente"
             android:padding="12dp"
             android:hint="Contraseña:"
             android:inputType="textPassword" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCrearCuenta"
-            android:layout_width="280dp"
+            android:layout_width="216dp"
             android:layout_height="54dp"
             android:layout_marginTop="22dp"
+            android:backgroundTint="#FFFFFF"
             android:text="Registrarse"
             android:textAllCaps="false"
-            android:textSize="16sp"
             android:textColor="#0F2E3A"
-            android:backgroundTint="#FFFFFF"
+            android:textSize="16sp"
             app:cornerRadius="16dp"
-            app:strokeWidth="1dp"
-            app:strokeColor="#1A000000"/>
+            app:strokeColor="#1A000000"
+            app:strokeWidth="1dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegresar"
-            android:layout_width="280dp"
+            android:layout_width="217dp"
             android:layout_height="54dp"
             android:layout_marginTop="22dp"
+            android:backgroundTint="#FFFFFF"
             android:text="Regresar"
             android:textAllCaps="false"
-            android:textSize="16sp"
             android:textColor="#0F2E3A"
-            android:backgroundTint="#FFFFFF"
+            android:textSize="16sp"
             app:cornerRadius="16dp"
-            app:strokeWidth="1dp"
-            app:strokeColor="#1A000000"/>
+            app:strokeColor="#1A000000"
+            app:strokeWidth="1dp" />
     </LinearLayout>
 
     <Space

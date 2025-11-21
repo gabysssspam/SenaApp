@@ -3,80 +3,80 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#F5F2EC">
+    android:background="#F5F2EC"
+    android:orientation="vertical">
 
     <Space
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/logo"
             android:layout_width="240dp"
             android:layout_height="240dp"
-            android:src="@drawable/logo_sena"
-            android:contentDescription="Logo SENA"
             android:adjustViewBounds="true"
-            android:scaleType="fitCenter" />
+            android:contentDescription="Logo SENA"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_sena" />
 
         <TextView
             android:id="@+id/titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-black"
             android:text="SENA"
             android:textColor="#0F2E3A"
             android:textSize="34sp"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-black" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/slogan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif-black"
             android:text="Aprende con las manos,comunica sin limites"
             android:textColor="#0F2E3A"
             android:textSize="15sp"
-            android:textStyle="italic"
-            android:fontFamily="sans-serif-black" />
+            android:textStyle="italic" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnIniciar"
             android:layout_width="280dp"
             android:layout_height="56dp"
             android:layout_marginTop="28dp"
+            android:backgroundTint="#43A047"
+            android:elevation="4dp"
             android:text="Iniciar sesión"
             android:textAllCaps="false"
+            android:textColor="#ffff"
             android:textSize="18sp"
-            android:textColor="#0F2E3A"
-            android:backgroundTint="#FFFFFF"
             app:cornerRadius="16dp"
-            app:strokeWidth="1dp"
             app:strokeColor="#1A000000"
-            android:elevation="4dp" />
+            app:strokeWidth="1dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegistrarse"
             android:layout_width="280dp"
             android:layout_height="56dp"
             android:layout_marginTop="16dp"
+            android:backgroundTint="#43A047"
+            android:elevation="4dp"
             android:text="Registrarse"
             android:textAllCaps="false"
+            android:textColor="#ffff"
             android:textSize="18sp"
-            android:textColor="#0F2E3A"
-            android:backgroundTint="#FFFFFF"
             app:cornerRadius="16dp"
-            app:strokeWidth="1dp"
             app:strokeColor="#1A000000"
-            android:elevation="4dp" />
+            app:strokeWidth="1dp" />
 
         <FrameLayout
             android:id="@+id/fragment_container"
@@ -90,5 +90,5 @@
     <Space
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 </LinearLayout>

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SENA">
         <activity
+            android:name=".Bienvenida"
+            android:exported="false" />
+        <activity
             android:name=".Progreso"
             android:exported="false" />
         <activity
