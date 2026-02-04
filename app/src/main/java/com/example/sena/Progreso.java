@@ -15,39 +15,22 @@ public class Progreso extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progreso);
 
-        // Icono configuración
-        ImageView btnSettings = findViewById(R.id.btnSettings);
-        btnSettings.setOnClickListener(v -> {
-            Intent intent = new Intent(Progreso.this, Configuracion.class);
-            startActivity(intent);
-        });
+        // ===== BOTÓN REGRESAR =====
+        Button btnRegresar = findViewById(R.id.btnRegresar);
+        btnRegresar.setOnClickListener(v -> finish());
 
-        // Barra inferior
+        // ===== NAV BAR =====
         LinearLayout navDiccionario = findViewById(R.id.navDiccionario);
         LinearLayout navProgreso = findViewById(R.id.navProgreso);
         LinearLayout navPerfil = findViewById(R.id.navPerfil);
 
-        navDiccionario.setOnClickListener(v -> {
-            Intent intent = new Intent(Progreso.this, Diccionario.class);
-            startActivity(intent);
-        });
+        navDiccionario.setOnClickListener(v ->
+                startActivity(new Intent(this, AbecedarioMenuActivity.class)));
 
-        // Estamos ya en Progreso; si quieres que recargue la misma pantalla puedes dejarlo así
-        navProgreso.setOnClickListener(v -> {
-            // Opcional: no hacer nada
-        });
+        // Ya estamos en progreso → no hace nada
+        navProgreso.setOnClickListener(v -> {});
 
-        navPerfil.setOnClickListener(v -> {
-            Intent intent = new Intent(Progreso.this, Perfil.class);
-            startActivity(intent);
-        });
-
-        Button btnRegresar = findViewById(R.id.btnRegresar);
-        btnRegresar.setOnClickListener(v -> {
-            Intent intent = new Intent(Progreso.this, Inicio.class);
-            startActivity(intent);
-            finish();
-        });
-
+        navPerfil.setOnClickListener(v ->
+                startActivity(new Intent(this, Perfil.class)));
     }
 }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Barra superior -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#2E7D32">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adivinanzas LSM"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <!-- Puntuación -->
+    <TextView
+        android:id="@+id/tvPuntos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Puntos: 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:gravity="center"
+        android:padding="12dp"/>
+
+    <!-- Video / Letra -->
+    <VideoView
+        android:id="@+id/videoAdivinanza"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/tvLetra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <!-- Opciones -->
+    <Button
+        android:id="@+id/btnOpcion1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/btnOpcion2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/btnOpcion3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"/>
+
+    <!-- Salir -->
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:backgroundTint="#C62828"
+        android:textColor="@android:color/white"
+        android:layout_margin="16dp"/>
+
+</LinearLayout>

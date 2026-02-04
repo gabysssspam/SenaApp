@@ -3,92 +3,90 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#F5F2EC"
-    android:orientation="vertical">
+    android:padding="24dp">
 
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
+    <!-- Contenedor principal centrado -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
         android:orientation="vertical">
 
+        <!-- Logo -->
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="240dp"
-            android:layout_height="240dp"
-            android:adjustViewBounds="true"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:contentDescription="Logo SENA"
             android:scaleType="fitCenter"
-            android:src="@drawable/logo_sena" />
+            android:src="@drawable/logo_sena"
+            android:layout_marginBottom="16dp"/>
 
+        <!-- Nombre App -->
         <TextView
             android:id="@+id/titulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:fontFamily="sans-serif-black"
             android:text="SENA"
+            android:textSize="36sp"
+            android:textStyle="bold"
             android:textColor="#0F2E3A"
-            android:textSize="34sp"
-            android:textStyle="bold" />
+            android:letterSpacing="0.15"
+            android:layout_marginBottom="6dp"/>
 
+        <!-- Slogan -->
         <TextView
             android:id="@+id/slogan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:fontFamily="sans-serif-black"
-            android:text="Aprende con las manos,comunica sin limites"
-            android:textColor="#0F2E3A"
+            android:text="Aprende con las manos, comunica sin límites"
             android:textSize="15sp"
-            android:textStyle="italic" />
+            android:textColor="#4A5A60"
+            android:gravity="center"
+            android:layout_marginBottom="32dp"/>
 
+        <!-- Botón Iniciar sesión -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnIniciar"
-            android:layout_width="280dp"
+            android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:layout_marginTop="28dp"
-            android:backgroundTint="#43A047"
-            android:elevation="4dp"
             android:text="Iniciar sesión"
-            android:textAllCaps="false"
-            android:textColor="#ffff"
             android:textSize="18sp"
-            app:cornerRadius="16dp"
-            app:strokeColor="#1A000000"
-            app:strokeWidth="1dp" />
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#43A047"
+            android:elevation="6dp"
+            app:cornerRadius="18dp"
+            app:rippleColor="#66FFFFFF"
+            android:layout_marginBottom="16dp"/>
 
+        <!-- Botón Registrarse -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegistrarse"
-            android:layout_width="280dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#43A047"
-            android:elevation="4dp"
-            android:text="Registrarse"
-            android:textAllCaps="false"
-            android:textColor="#ffff"
-            android:textSize="18sp"
-            app:cornerRadius="16dp"
-            app:strokeColor="#1A000000"
-            app:strokeWidth="1dp" />
-
-        <FrameLayout
-            android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:visibility="gone" />
-
+            android:layout_height="56dp"
+            android:text="Registrarse"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="#43A047"
+            android:backgroundTint="@android:color/white"
+            android:elevation="2dp"
+            app:cornerRadius="18dp"
+            app:strokeColor="#43A047"
+            app:strokeWidth="2dp"/>
     </LinearLayout>
 
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+    <!-- Footer sutil -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="© 2026 SENA · Inclusión y accesibilidad"
+        android:textSize="12sp"
+        android:textColor="#8A8A8A"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"/>
+
 </LinearLayout>

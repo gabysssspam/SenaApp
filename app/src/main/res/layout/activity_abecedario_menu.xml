@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Barra superior -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#2E7D32"
+        android:elevation="4dp">
+
+        <Button
+            android:id="@+id/btnRegresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="12dp"/>
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abecedario LSM"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <!-- Catálogo -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="16dp">
+
+            <!-- A -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/a"
+                android:scaleType="fitCenter"/>
+
+            <!-- B -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/b"
+                android:scaleType="fitCenter"/>
+
+            <!-- C -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/c"
+                android:scaleType="fitCenter"/>
+
+            <!-- D -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/d"
+                android:scaleType="fitCenter"/>
+
+            <!-- E -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/e"
+                android:scaleType="fitCenter"/>
+
+            <!-- F -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/f"
+                android:scaleType="fitCenter"/>
+
+            <!-- G -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/g"
+                android:scaleType="fitCenter"/>
+
+            <!-- H -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/h"
+                android:scaleType="fitCenter"/>
+
+            <!-- I -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/i"
+                android:scaleType="fitCenter"/>
+
+            <!-- J -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/j"
+                android:scaleType="fitCenter"/>
+
+            <!-- K -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/k"
+                android:scaleType="fitCenter"/>
+
+            <!-- L -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/l"
+                android:scaleType="fitCenter"/>
+
+            <!-- M -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/m"
+                android:scaleType="fitCenter"/>
+
+            <!-- N -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/m"
+                android:scaleType="fitCenter"/>
+
+            <!-- O -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/o"
+                android:scaleType="fitCenter"/>
+
+            <!-- P -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/p"
+                android:scaleType="fitCenter"/>
+
+            <!-- Q -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/r"
+                android:scaleType="fitCenter"/>
+
+            <!-- R -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/r"
+                android:scaleType="fitCenter"/>
+
+            <!-- S -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/s"
+                android:scaleType="fitCenter"/>
+
+            <!-- T -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/s"
+                android:scaleType="fitCenter"/>
+
+            <!-- U -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/u"
+                android:scaleType="fitCenter"/>
+
+            <!-- V -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/v"
+                android:scaleType="fitCenter"/>
+
+            <!-- W -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/w"
+                android:scaleType="fitCenter"/>
+
+            <!-- X -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/x"
+                android:scaleType="fitCenter"/>
+
+            <!-- Y -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/y"
+                android:scaleType="fitCenter"/>
+
+            <!-- Z -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:src="@drawable/z"
+                android:scaleType="fitCenter"/>
+
+        </GridLayout>
+    </ScrollView>
+
+</LinearLayout>

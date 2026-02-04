@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Barra superior -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#2E7D32">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Memorama"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <!-- Puntuación -->
+    <TextView
+        android:id="@+id/tvPuntos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Puntos: 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:gravity="center"
+        android:padding="12dp"/>
+
+    <!-- Tablero -->
+    <GridLayout
+        android:id="@+id/gridMemorama"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:columnCount="4"
+        android:padding="16dp"
+        android:useDefaultMargins="true"/>
+
+    <!-- Salir -->
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:backgroundTint="#C62828"
+        android:textColor="@android:color/white"
+        android:layout_margin="16dp"/>
+
+</LinearLayout>

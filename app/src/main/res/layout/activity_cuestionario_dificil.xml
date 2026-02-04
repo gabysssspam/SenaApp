@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Barra superior -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#2E7D32">
+
+            <TextView
+                android:id="@+id/tvTituloDificil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuestionario Difícil"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <!-- Puntuación -->
+        <TextView
+            android:id="@+id/tvPuntosDificil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Puntos: 0"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:gravity="center"
+            android:padding="12dp"/>
+
+        <!-- Video / Imagen -->
+        <VideoView
+            android:id="@+id/videoPreguntaDificil"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="16dp"
+            android:background="@android:color/darker_gray"/>
+
+        <!-- Pregunta -->
+        <TextView
+            android:id="@+id/tvPreguntaDificil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pregunta"
+            android:textSize="18sp"
+            android:textColor="#263238"
+            android:padding="16dp"/>
+
+        <!-- Opciones -->
+        <RadioGroup
+            android:id="@+id/rgOpcionesDificil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <RadioButton
+                android:id="@+id/rbOpcion1Dificil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opción 1"/>
+
+            <RadioButton
+                android:id="@+id/rbOpcion2Dificil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opción 2"/>
+
+            <RadioButton
+                android:id="@+id/rbOpcion3Dificil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opción 3"/>
+        </RadioGroup>
+
+        <!-- Botones -->
+        <Button
+            android:id="@+id/btnSiguienteDificil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Siguiente"
+            android:backgroundTint="#2E7D32"
+            android:textColor="@android:color/white"
+            android:layout_margin="16dp"/>
+
+        <Button
+            android:id="@+id/btnSalirDificil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salir"
+            android:backgroundTint="#B71C1C"
+            android:textColor="@android:color/white"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

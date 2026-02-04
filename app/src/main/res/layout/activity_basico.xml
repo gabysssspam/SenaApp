@@ -3,56 +3,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#43A047">
+    android:background="#66BB6A">
 
     <!-- Barra superior -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:gravity="center_vertical">
+        android:background="#2E7D32"
+        android:gravity="center">
 
-        <!-- Título centrado -->
         <TextView
             android:id="@+id/tvTituloBasico"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Basico"
+            android:text="Básico"
             android:textColor="@android:color/white"
             android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_centerInParent="true" />
+            android:textStyle="bold" />
     </RelativeLayout>
 
-    <!-- Contenido principal -->
+    <!-- Contenido -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp">
+        android:paddingVertical="12dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- ITEM TEMPLATE -->
             <!-- FAMILIA -->
             <LinearLayout
                 android:id="@+id/itemFamilia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="12dp"
-                android:padding="12dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="12dp"
+                android:padding="14dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/rounded_button"
+                android:elevation="4dp"
                 android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground">
+                android:focusable="true">
 
                 <TextView
                     android:id="@+id/tvFamilia"
@@ -60,16 +56,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Familia"
-                    android:textColor="#000000"
+                    android:textColor="#1B5E20"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imgFamilia"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:contentDescription="Icono Familia"
-                    android:src="@drawable/familia"/>
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/familia" />
             </LinearLayout>
 
             <!-- PRONOMBRES -->
@@ -77,16 +72,15 @@
                 android:id="@+id/itemPronombres"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="12dp"
-                android:padding="12dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="12dp"
+                android:padding="14dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/rounded_button"
+                android:elevation="4dp"
                 android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground">
+                android:focusable="true">
 
                 <TextView
                     android:id="@+id/tvPronombres"
@@ -94,16 +88,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Pronombres"
-                    android:textColor="#000000"
+                    android:textColor="#1B5E20"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imgPronombres"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:contentDescription="Icono Pronombres"
-                    android:src="@drawable/pronombres"/>
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/pronombres" />
             </LinearLayout>
 
             <!-- SEMANA / MES / AÑO -->
@@ -111,33 +104,31 @@
                 android:id="@+id/itemTiempo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="12dp"
-                android:padding="12dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="12dp"
+                android:padding="14dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/rounded_button"
+                android:elevation="4dp"
                 android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground">
+                android:focusable="true">
 
                 <TextView
                     android:id="@+id/tvTiempo"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Semana/Mes/Año"
-                    android:textColor="#000000"
+                    android:text="Semana / Mes / Año"
+                    android:textColor="#1B5E20"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imgTiempo"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:contentDescription="Icono Calendario"
-                    android:src="@drawable/calendario"/>
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/calendario" />
             </LinearLayout>
 
             <!-- SALUDOS -->
@@ -145,16 +136,15 @@
                 android:id="@+id/itemSaludos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="12dp"
-                android:padding="12dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="12dp"
+                android:padding="14dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/rounded_button"
+                android:elevation="4dp"
                 android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground">
+                android:focusable="true">
 
                 <TextView
                     android:id="@+id/tvSaludos"
@@ -162,16 +152,15 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Saludos"
-                    android:textColor="#000000"
+                    android:textColor="#1B5E20"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imgSaludos"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:contentDescription="Icono Saludos"
-                    android:src="@drawable/saludos"/>
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/saludos" />
             </LinearLayout>
 
             <!-- PALABRAS BÁSICAS -->
@@ -179,33 +168,31 @@
                 android:id="@+id/itemPalabrasBasicas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="12dp"
-                android:padding="12dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="12dp"
+                android:padding="14dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/rounded_button"
+                android:elevation="4dp"
                 android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground">
+                android:focusable="true">
 
                 <TextView
                     android:id="@+id/tvPalabrasBasicas"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Palabras basicas"
-                    android:textColor="#000000"
+                    android:text="Palabras básicas"
+                    android:textColor="#1B5E20"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imgPalabrasBasicas"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:contentDescription="Icono Palabras Básicas"
-                    android:src="@drawable/palabritasbas"/>
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/palabritasbas" />
             </LinearLayout>
 
             <!-- VERBOS -->
@@ -213,16 +200,15 @@
                 android:id="@+id/itemVerbos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="12dp"
-                android:padding="12dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="12dp"
+                android:padding="14dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/rounded_button"
+                android:elevation="4dp"
                 android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground">
+                android:focusable="true">
 
                 <TextView
                     android:id="@+id/tvVerbos"
@@ -230,50 +216,47 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Verbos"
-                    android:textColor="#000000"
+                    android:textColor="#1B5E20"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imgVerbos"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:contentDescription="Icono Verbos"
-                    android:src="@drawable/verbos"/>
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/verbos" />
             </LinearLayout>
 
-            <!-- EMOCIONES Y SENTIMIENTOS -->
+            <!-- EMOCIONES -->
             <LinearLayout
                 android:id="@+id/itemEmociones"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="12dp"
-                android:padding="12dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="16dp"
+                android:padding="14dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:background="@drawable/rounded_button"
+                android:elevation="4dp"
                 android:clickable="true"
-                android:focusable="true"
-                android:foreground="?attr/selectableItemBackground">
+                android:focusable="true">
 
                 <TextView
                     android:id="@+id/tvEmociones"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Emociones y\nSentimientos"
-                    android:textColor="#000000"
+                    android:text="Emociones y Sentimientos"
+                    android:textColor="#1B5E20"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/imgEmociones"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:contentDescription="Icono Emociones"
-                    android:src="@drawable/emoysenti"/>
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/emoysenti" />
             </LinearLayout>
 
             <Button
@@ -281,21 +264,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Regresar"
+                android:textStyle="bold"
                 android:backgroundTint="#2E7D32"
                 android:textColor="@android:color/white"
-                android:layout_marginVertical="10dp"
-                android:layout_marginHorizontal="50dp"/>
-
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginBottom="16dp"/>
         </LinearLayout>
     </ScrollView>
 
+    <!-- Barra inferior -->
     <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:orientation="horizontal"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:background="#0A1F28">
+        android:background="#1B5E20">
 
         <!-- Diccionario -->
         <LinearLayout
@@ -303,23 +286,22 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/navDiccionarioIcon"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:contentDescription="Diccionario"
-                android:src="@drawable/diccionario"/>
+                android:src="@drawable/diccionario"
+                android:tint="@android:color/white"
+                tools:ignore="UseAppTint"/>
 
             <TextView
-                android:id="@+id/navDiccionarioText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Diccionario"
                 android:textColor="@android:color/white"
-                android:textSize="12sp" />
+                android:textSize="12sp"/>
         </LinearLayout>
 
         <!-- Progreso -->
@@ -328,23 +310,22 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/navProgresoIcon"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:contentDescription="Progreso"
-                android:src="@drawable/progreso" />
+                android:src="@drawable/progreso"
+                android:tint="@android:color/white"
+                tools:ignore="UseAppTint"/>
 
             <TextView
-                android:id="@+id/navProgresoText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Progreso"
                 android:textColor="@android:color/white"
-                android:textSize="12sp" />
+                android:textSize="12sp"/>
         </LinearLayout>
 
         <!-- Mi perfil -->
@@ -353,23 +334,24 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/navPerfilIcon"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:contentDescription="Mi perfil"
-                android:src="@drawable/perfil"/>
+                android:src="@drawable/perfil"
+                android:tint="@android:color/white"
+                tools:ignore="UseAppTint"/>
 
             <TextView
-                android:id="@+id/navPerfilText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mi perfil"
                 android:textColor="@android:color/white"
-                android:textSize="12sp" />
+                android:textSize="12sp"/>
         </LinearLayout>
+
     </LinearLayout>
+
 </LinearLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F0FFF0">
+
+    <!-- Título del quiz -->
+    <TextView
+        android:id="@+id/tvTituloQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cuestionario"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- Progreso -->
+    <TextView
+        android:id="@+id/tvProgresoQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pregunta 1/6"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingBottom="8dp"/>
+
+    <!-- Pregunta -->
+    <TextView
+        android:id="@+id/tvPregunta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aquí va la pregunta"
+        android:textSize="18sp"
+        android:padding="8dp"/>
+
+    <!-- Imagen opcional -->
+    <TextView
+        android:id="@+id/tvPlaceholderImg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:background="#DDD"
+        android:text="Imagen de la seña"
+        android:padding="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Opciones -->
+    <RadioGroup
+        android:id="@+id/rgOpciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
+
+        <RadioButton
+            android:id="@+id/rbOpcionA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opción A"/>
+
+        <RadioButton
+            android:id="@+id/rbOpcionB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opción B"/>
+
+        <RadioButton
+            android:id="@+id/rbOpcionC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opción C"/>
+
+        <RadioButton
+            android:id="@+id/rbOpcionD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opción D"/>
+    </RadioGroup>
+
+    <!-- Botón siguiente -->
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comprobar"/>
+
+    <!-- Panel de resultado -->
+    <LinearLayout
+        android:id="@+id/resultPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone"
+        android:background="#DDFFDD">
+
+        <TextView
+            android:id="@+id/tvResultTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correcto!"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvResultDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción del resultado"
+            android:gravity="center"
+            android:paddingTop="4dp"/>
+
+        <Button
+            android:id="@+id/btnResultOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- Botón salir -->
+    <Button
+        android:id="@+id/btnSalirQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salir del Quiz"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="18dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/txtPalabra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Palabra"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_marginBottom="12dp"/>
+
+    <ImageView
+        android:id="@+id/imgSenia"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:scaleType="centerInside"
+        android:background="#EEEEEE"/>
+
+    <Button
+        android:id="@+id/btnCerrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cerrar"
+        android:textAllCaps="false"
+        android:layout_marginTop="14dp"
+        android:backgroundTint="#2E7D32"
+        android:textColor="@android:color/white"/>
+</LinearLayout>

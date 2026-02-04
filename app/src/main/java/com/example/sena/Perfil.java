@@ -1,10 +1,12 @@
 package com.example.sena;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,36 +17,46 @@ public class Perfil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
 
-        ImageView btnSettings = findViewById(R.id.btnSettings);
-        btnSettings.setOnClickListener(v -> {
-            Intent intent = new Intent(Perfil.this, Configuracion.class);
-            startActivity(intent);
-        });
+        // ===== BOTÓN REGRESAR =====
+        Button btnRegresar = findViewById(R.id.btnRegresar);
+        btnRegresar.setOnClickListener(v -> finish());
 
+        // ===== REDES SOCIALES =====
+        TextView btnX = findViewById(R.id.btnX);
+        TextView btnInstagram = findViewById(R.id.btnInstagram);
+        TextView btnFacebook = findViewById(R.id.btnFacebook);
+
+        btnX.setOnClickListener(v ->
+                abrirLink("https://x.com/")
+        );
+
+        btnInstagram.setOnClickListener(v ->
+                abrirLink("https://www.instagram.com/")
+        );
+
+        btnFacebook.setOnClickListener(v ->
+                abrirLink("https://www.facebook.com/")
+        );
+
+        // ===== NAV BAR =====
         LinearLayout navDiccionario = findViewById(R.id.navDiccionario);
         LinearLayout navProgreso = findViewById(R.id.navProgreso);
         LinearLayout navPerfil = findViewById(R.id.navPerfil);
 
-        navDiccionario.setOnClickListener(v -> {
-            Intent intent = new Intent(Perfil.this, Diccionario.class);
-            startActivity(intent);
-        });
+        navDiccionario.setOnClickListener(v ->
+                startActivity(new Intent(this, AbecedarioMenuActivity.class))
+        );
 
-        navProgreso.setOnClickListener(v -> {
-            Intent intent = new Intent(Perfil.this, Progreso.class);
-            startActivity(intent);
-        });
+        navProgreso.setOnClickListener(v ->
+                startActivity(new Intent(this, Progreso.class))
+        );
 
-        // Estamos ya en Perfil, si quieres que no haga nada, lo dejas vacío
-        navPerfil.setOnClickListener(v -> {
-            // Opcional: no hacer nada
-        });
+        // Ya estamos en perfil → no hace nada
+        navPerfil.setOnClickListener(v -> {});
+    }
 
-        Button btnRegresar = findViewById(R.id.btnRegresar);
-        btnRegresar.setOnClickListener(v -> {
-            Intent intent = new Intent(Perfil.this, Inicio.class);
-            startActivity(intent);
-            finish();
-        });
+    private void abrirLink(String url) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(intent);
     }
 }

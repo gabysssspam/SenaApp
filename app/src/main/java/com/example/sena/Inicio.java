@@ -3,70 +3,107 @@ package com.example.sena;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Inicio extends AppCompatActivity {
 
+    private LinearLayout btnIntroduccion, btnBasico, btnIntermedio, btnAvanzado;
+    private LinearLayout btnJuegos, btnCuestionarios;
+    private LinearLayout navAbecedarioMenuActivity, navProgreso, navPerfil;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (!SessionManager.isLoggedIn(this)) {
+            startActivity(new Intent(this, InicioSesion.class));
+            finish();
+            return;
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
 
-        LinearLayout btnIntroduccion = findViewById(R.id.btnIntroduccion);
-        LinearLayout btnBasico = findViewById(R.id.btnBasico);
-        LinearLayout btnIntermedio = findViewById(R.id.btnIntermedio);
-        LinearLayout btnAvanzado = findViewById(R.id.btnAvanzado);
-        LinearLayout btnJuegos = findViewById(R.id.btnJuegos);
-        LinearLayout btnDiccionario = findViewById(R.id.navDiccionario);
-        LinearLayout btnCuestionarios = findViewById(R.id.btnCuestionarios);
-        LinearLayout btnPerfil = findViewById(R.id.navPerfil);
-        LinearLayout btnProgreso = findViewById(R.id.navProgreso);
+        // ===== BOTONES PRINCIPALES =====
+        btnIntroduccion = findViewById(R.id.btnIntroduccion);
+        btnBasico = findViewById(R.id.btnBasico);
+        btnIntermedio = findViewById(R.id.btnIntermedio);
+        btnAvanzado = findViewById(R.id.btnAvanzado);
+        btnJuegos = findViewById(R.id.btnJuegos);
+        btnCuestionarios = findViewById(R.id.btnCuestionarios);
 
-        // Navegación a otras pantallas
-        btnIntroduccion.setOnClickListener(v -> {
-            Intent intent = new Intent(Inicio.this, Introduccion.class);
-            startActivity(intent);
-        });
+        // ===== NAV BAR =====
+        navAbecedarioMenuActivity = findViewById(R.id.navAbecedarioMenuActivity);
+        navProgreso = findViewById(R.id.navProgreso);
+        navPerfil = findViewById(R.id.navPerfil);
 
+        // ===== INTRODUCCIÓN =====
+        btnIntroduccion.setOnClickListener(v ->
+                startActivity(new Intent(Inicio.this, Introduccion.class))
+        );
+
+        // ===== BÁSICO =====
         btnBasico.setOnClickListener(v -> {
-            Intent intent = new Intent(Inicio.this, Basico.class);
-            startActivity(intent);
+            if (!ModuleProgressManager.isModuleCompleted(this, "INTRO")) {
+                int seen = ModuleProgressManager.getSeenCount(this, "INTRO");
+                int total = ModuleStructure.getTotalItemsForModule("INTRO");
+                Toast.makeText(this,
+                        "Primero completa Introducción (" + seen + "/" + total + ")",
+                        Toast.LENGTH_SHORT).show();
+                return;
+            }
+            startActivity(new Intent(Inicio.this, Basico.class));
         });
 
+        // ===== INTERMEDIO =====
         btnIntermedio.setOnClickListener(v -> {
-            Intent intent = new Intent(Inicio.this, Intermedio.class);
-            startActivity(intent);
+            if (!ModuleProgressManager.isModuleCompleted(this, "BASICO")) {
+                int seen = ModuleProgressManager.getSeenCount(this, "BASICO");
+                int total = ModuleStructure.getTotalItemsForModule("BASICO");
+                Toast.makeText(this,
+                        "Primero completa Básico (" + seen + "/" + total + ")",
+                        Toast.LENGTH_SHORT).show();
+                return;
+            }
+            startActivity(new Intent(Inicio.this, Intermedio.class));
         });
 
+        // ===== AVANZADO =====
         btnAvanzado.setOnClickListener(v -> {
-            Intent intent = new Intent(Inicio.this, Avanzado.class);
-            startActivity(intent);
+            if (!ModuleProgressManager.isModuleCompleted(this, "INTERMEDIO")) {
+                int seen = ModuleProgressManager.getSeenCount(this, "INTERMEDIO");
+                int total = ModuleStructure.getTotalItemsForModule("INTERMEDIO");
+                Toast.makeText(this,
+                        "Primero completa Intermedio (" + seen + "/" + total + ")",
+                        Toast.LENGTH_SHORT).show();
+                return;
+            }
+            startActivity(new Intent(Inicio.this, Avanzado.class));
         });
 
-        btnJuegos.setOnClickListener(v -> {
-            Intent intent = new Intent(Inicio.this, Juegos.class);
-            startActivity(intent);
-        });
+        // ===== JUEGOS =====
+        btnJuegos.setOnClickListener(v ->
+                startActivity(new Intent(Inicio.this, Juegos.class))
+        );
 
-        btnCuestionarios.setOnClickListener(v -> {
-            Intent intent = new Intent(Inicio.this, Cuestionarios.class);
-            startActivity(intent);
-        });
+        // ===== CUESTIONARIOS =====
+        btnCuestionarios.setOnClickListener(v ->
+                startActivity(new Intent(Inicio.this, Cuestionarios.class))
+        );
 
-        btnDiccionario.setOnClickListener(v -> {
-            Intent intent = new Intent(Inicio.this, Diccionario.class);
-            startActivity(intent);
-        });
+        // ✅ AQUÍ ESTÁ LO QUE PEDÍAS: IR A PROGRESO DESDE INICIO
+        navAbecedarioMenuActivity.setOnClickListener(v ->
+                startActivity(new Intent(Inicio.this, AbecedarioMenuActivity.class))
+        );
 
-        btnPerfil.setOnClickListener(v -> {
-            Intent intent = new Intent(Inicio.this, Perfil.class);
-            startActivity(intent);
-        });
+        // ✅ AQUÍ ESTÁ LO QUE PEDÍAS: IR A PROGRESO DESDE INICIO
+        navProgreso.setOnClickListener(v ->
+                startActivity(new Intent(Inicio.this, Progreso.class))
+        );
 
-        btnProgreso.setOnClickListener(v -> {
-            Intent intent = new Intent(Inicio.this, Progreso.class);
-            startActivity(intent);
-        });
+        // ===== NAV PERFIL =====
+        navPerfil.setOnClickListener(v ->
+                startActivity(new Intent(Inicio.this, Perfil.class))
+        );
     }
 }

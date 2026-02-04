@@ -2,4 +2,16 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="green_primary">#2E7D32</color>
+    <color name="green_light">#4CAF50</color>
+    <color name="green_dark">#1B5E20</color>
+
+        <!-- Colores del memorama -->
+    <color name="teal_500">#009688</color>
+    <color name="teal_700">#00796B</color>
+    <color name="purple_700">#512DA8</color>
+
+        <!-- Estados -->
+    <color name="error_red">#C62828</color>
 </resources>

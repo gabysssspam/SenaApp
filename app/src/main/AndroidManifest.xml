@@ -12,6 +12,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SENA">
         <activity
+            android:name=".CuestionarioDificil"
+            android:exported="false" />
+        <activity
+            android:name=".CuestionarioIntermedio"
+            android:exported="false" />
+        <activity
+            android:name=".CuestionarioFacil"
+            android:exported="false" />
+        <activity
+            android:name=".Vestimenta"
+            android:exported="false" />
+        <activity
+            android:name=".Cuerpo"
+            android:exported="false" />
+        <activity
+            android:name=".Animales"
+            android:exported="false" />
+        <activity
+            android:name=".Alimentos"
+            android:exported="false" />
+        <activity
+            android:name=".Numeros"
+            android:exported="false" />
+        <activity
+            android:name=".Colores"
+            android:exported="false" />
+        <activity
+            android:name=".AbecedarioMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CategoriaLista"
+            android:exported="false" />
+        <activity
             android:name=".Bienvenida"
             android:exported="false" />
         <activity

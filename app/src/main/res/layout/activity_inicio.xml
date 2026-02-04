@@ -3,12 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#43A047">
+    android:background="#E8F5E9">
 
     <!-- Barra superior -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
+        android:background="#43A047"
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
 
@@ -29,61 +30,60 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:columnCount="2"
-        android:rowCount="3"
         android:padding="16dp">
 
+        <!-- Introducción -->
         <LinearLayout
             android:id="@+id/btnIntroduccion"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:background="@drawable/rounded_button"
             android:layout_margin="8dp"
             android:orientation="vertical"
             android:gravity="center"
+            android:background="@drawable/card_menu"
             android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:focusable="true">
 
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-
                 android:src="@drawable/introduccion"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Introducción"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="#0F2E3A"/>
         </LinearLayout>
 
-        <!-- Botón Básico -->
+        <!-- Básico -->
         <LinearLayout
             android:id="@+id/btnBasico"
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
             android:layout_margin="8dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@drawable/rounded_button"
+            android:background="@drawable/card_menu"
             android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:focusable="true">
 
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/basico"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Básico"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#0F2E3A"/>
         </LinearLayout>
 
         <!-- Intermedio -->
@@ -92,25 +92,25 @@
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
             android:layout_margin="8dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@drawable/rounded_button"
+            android:background="@drawable/card_menu"
             android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:focusable="true">
 
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/intermedio"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Intermedio"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#0F2E3A"/>
         </LinearLayout>
 
         <!-- Avanzado -->
@@ -119,25 +119,25 @@
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
             android:layout_margin="8dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@drawable/rounded_button"
+            android:background="@drawable/card_menu"
             android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:focusable="true">
 
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/avanzado"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Avanzado"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#0F2E3A"/>
         </LinearLayout>
 
         <!-- Juegos -->
@@ -146,25 +146,25 @@
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
             android:layout_margin="8dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@drawable/rounded_button"
+            android:background="@drawable/card_menu"
             android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:focusable="true">
 
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/juegos"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Juegos"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#0F2E3A"/>
         </LinearLayout>
 
         <!-- Cuestionarios -->
@@ -173,42 +173,40 @@
             android:layout_width="0dp"
             android:layout_height="120dp"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
             android:layout_margin="8dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:background="@drawable/rounded_button"
+            android:background="@drawable/card_menu"
             android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground">
+            android:focusable="true">
 
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/cuestionario"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Cuestionarios"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#0F2E3A"/>
         </LinearLayout>
     </GridLayout>
 
     <!-- Barra inferior -->
+    <!-- Barra inferior -->
     <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="72dp"
         android:orientation="horizontal"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:background="#0A1F28">
+        android:background="#1B5E20">
 
         <!-- Diccionario -->
-
-        <!-- Progreso -->
         <LinearLayout
-            android:id="@+id/navDiccionario"
+            android:id="@+id/navAbecedarioMenuActivity"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -216,43 +214,42 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/navDiccionarioIcon"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:contentDescription="Diccionario"
-                android:src="@drawable/diccionario" />
+                android:src="@drawable/diccionario"
+                android:tint="@android:color/white"
+                tools:ignore="UseAppTint"/>
 
             <TextView
-                android:id="@+id/navDiccionarioText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Diccionario"
                 android:textColor="@android:color/white"
-                android:textSize="12sp" />
+                android:textSize="12sp"/>
         </LinearLayout>
 
+        <!-- Progreso -->
         <LinearLayout
             android:id="@+id/navProgreso"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/navProgresoIcon"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:contentDescription="Progreso"
-                android:src="@drawable/progreso" />
+                android:src="@drawable/progreso"
+                android:tint="@android:color/white"
+                tools:ignore="UseAppTint"/>
 
             <TextView
-                android:id="@+id/navProgresoText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Progreso"
                 android:textColor="@android:color/white"
-                android:textSize="12sp" />
+                android:textSize="12sp"/>
         </LinearLayout>
 
         <!-- Mi perfil -->
@@ -261,23 +258,23 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/navPerfilIcon"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:contentDescription="Mi perfil"
-                android:src="@drawable/perfil"/>
+                android:src="@drawable/perfil"
+                android:tint="@android:color/white"
+                tools:ignore="UseAppTint"/>
 
             <TextView
-                android:id="@+id/navPerfilText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mi perfil"
                 android:textColor="@android:color/white"
-                android:textSize="12sp" />
+                android:textSize="12sp"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
+
